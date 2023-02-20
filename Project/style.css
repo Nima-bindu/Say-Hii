@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(150, 62, 62, 0.752),rgba(0, 0, 0, 0.752)),url(sayhi2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.logo{
+    width: 300px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 35px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%);
+    text-align: center;
+    color: darkgrey;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: -50px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: lightgrey;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+.login{
+    border: 2px solid #009688;
+    background: transparent;
+    padding: 30px 120px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+}
+.logoo{
+    width: 200px;
+    margin-bottom: 20px;
+}
+.login h2{
+    margin-bottom: 10px;
+    color: rgb(210, 215, 215);
+}
+.login button img{
+    width: 18px;
+    margin-right: 10px;
+}
+.login button{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid #009688;
+    font-weight: 500;
+    cursor: pointer;
+}
+.login hr{
+    border: 0;
+    height: 1px;
+    background: #c2c2c2;
+    margin: 10px;
+}
+.login input{
+    width: 100%;
+    background: transparent;
+    border: 1px solid #009688;
+    outline: 0;
+    padding: 15px 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+::placeholder{
+    font-weight: 500;
+    color: rgb(171, 187, 187);
+}
+.login form button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: lightgrey;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.login span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.login form button:hover span{
+    width: 100%;
+}
+.login form button:hover{
+    border: none;
+}
+.login p{
+    text-align: center;
+    font-size: 12px;
+    color: lightgray;
+    margin: 40px 0 30px;
+}
+.login p a{
+    text-decoration: underline;
+    color: azure;
+}
+.signup{
+    border: 2px solid #009688;
+    background: transparent;
+    padding: 30px 120px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+}
+.logoo{
+    width: 200px;
+    margin-bottom: 20px;
+}
+.signup h2{
+    margin-bottom: 10px;
+    color: rgb(210, 215, 215);
+}
+.signup button img{
+    width: 18px;
+    margin-right: 10px;
+}
+.signup button{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid #009688;
+    font-weight: 500;
+    cursor: pointer;
+}
+.signup hr{
+    border: 0;
+    height: 1px;
+    background: #c2c2c2;
+    margin: 10px;
+}
+.signup input{
+    width: 100%;
+    background: transparent;
+    border: 1px solid #009688;
+    outline: 0;
+    padding: 15px 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+::placeholder{
+    font-weight: 500;
+    color: rgb(171, 187, 187);
+}
+.signup form button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: lightgrey;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.signup span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.signup form button:hover span{
+    width: 100%;
+}
+.signup form button:hover{
+    border: none;
+}
+.signup p{
+    text-align: center;
+    font-size: 12px;
+    color: lightgray;
+    margin: 40px 0 30px;
+}
+.signup p a{
+    text-decoration: underline;
+    color: azure;
+}
+.upload{
+    border: 2px solid #009688;
+    background: transparent;
+    padding: 30px 120px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.upload h1{
+    margin-bottom: 10px;
+    color: azure;
+}
+.upload button{
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: lightgrey;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.upload input{
+    width: 100%;
+    background: transparent;
+    color: lightgrey;
+    border: 1px solid #009688;
+    outline: 0;
+    padding: 15px 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.upload p{
+    text-align: center;
+    font-size: 12px;
+    color: lightgray;
+    margin: 40px 0 30px;
+}
+.upload p a{
+    text-decoration: underline;
+    color: azure;
+}
+.record{
+    border: 2px solid #009688;
+    background: transparent;
+    padding: 30px 120px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.record h1{
+    margin-bottom: 10px;
+    color: azure;
+}
+.record button{
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: lightgrey;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.record span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.record button:hover span{
+    width: 100%;
+}
+.record button:hover{
+    border: none;
+}
+.record p{
+    text-align: center;
+    font-size: 12px;
+    color: lightgray;
+    margin: 20px 0 10px;
+}
+.record p a{
+    text-decoration: underline;
+    color: azure;
+}
