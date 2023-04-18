@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/style.css')}}">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <a href="{{url_for('main')}}">
+                <img src="{{url_for('static',filename='images/logo.png')}}" class="logo">
+            </a>   
+        </div>
+        <div class="upload">
+            <h1>Upload Your Audio Files</h1>
+            <form action="{{url_for('predict')}}" method="post" enctype="multipart/form-data">
+                <input type="file" name="audioFile" accept="audio/*">
+                <audio controls id="audioPlayer"></audio>
+                
+                <!-- <script>
+                    const input = document.querySelector('input[type="file"]');
+                    const audioPlayer = document.querySelector('#audioPlayer');
+                    
+                    input.addEventListener('change', function() {
+                        const file = this.files[0];
+                        const reader = new FileReader();
+                        
+                        reader.addEventListener('load', function() {
+                            audioPlayer.src = reader.result;
+                        });
+                        
+                        reader.readAsDataURL(file);
+                    });
+                    </script> -->
+            <a href="upload.html">
+                <button type="button"><span></span>
+                    Reset</button></a>
+                        <input type="submit"><span></span>
+                </button>
+            </form>
+                            <p>Back to Home page <a href="{{url_for('main')}}">Home</a></p>
+
+        </div>
+        {%if message%}
+        <p>It is {{message}}</p>
+        {%endif%}
+     </div>
+    
+</body>
+</html>

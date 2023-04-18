@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/style.css')}}">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <a href="{{url_for('main')}}">
+                <img src="{{url_for('static',filename='images/logo.png')}}" class="logo">
+            </a> 
+        </div>
+        <div class="record">
+            <h1>Record your Voice</h1>
+            <audio id="recorder" muted></audio>
+            <div>
+                <button id="start"><span></span> 
+                    Record</button>
+                <button id="stop"><span></span>
+                    Stop Recording</button>
+            </div>
+            <p>Saved Recording</p>
+            <audio id="player" controls></audio>
+            <a href="record.html">
+            <button id="reset" onclick="output"><span></span>
+                Reset</button></a>
+            <a href="#">
+                <div class="container">
+                <button id="scan" type="submit" class="btn" onclick="openPopup()"><span></span>
+                    Scan</button>
+                    <div class="popup" id="popup">
+                        <img src="{{url_for('static',filename='images/tick.png')}}">
+                        <h2>Gender: </h2>
+                        <h2>Age group: </h2>
+                        <button type="button" onclick="closePopup()" >OK</button>
+                    </div>
+                </div>
+            </a>
+            <p>Back to Home page <a href="{{url_for('main')}}">Home</a></p>
+        </div>
+     </div>
+     <script>
+        let popup = document.getElementById("popup");
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+     </script>
+</body>
+</html>
